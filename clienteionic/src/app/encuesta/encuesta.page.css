@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/* Contenedor principal */
+.container {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Centrando el formulario */
+.row.justify-content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-sm-6 {
+  width: 100%; /* Para que ocupe todo el ancho en móviles */
+  max-width: 400px; /* Ajusta el ancho máximo del formulario */
+}
+
+/* Título principal */
+h1, h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Descripción */
+p {
+  font-family: "Open Sans", sans-serif;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+/* Etiquetas de formularios */
+.form-label {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  color: #34495e;
+}
+
+/* Input y textarea */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #bdc3c7;
+  padding: 12px;
+  font-size: 0.9rem;
+}
+
+/* Estilos para botones */
+button {
+  font-family: "Poppins", sans-serif;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-success {
+  background-color: #27ae60;
+  border: none;
+  color: white;
+}
+
+button.btn-success:hover {
+  background-color: #2ecc71;
+}
+
+button.btn-outline-success {
+  border: 1px solid #27ae60;
+  color: #27ae60;
+  background-color: white;
+}
+
+button.btn-outline-success:hover {
+  background-color: #27ae60;
+  color: white;
+}
+
+button.btn-danger {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+}
+
+button.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+/* Tarjetas para cada pregunta */
+.card {
+  border: 1px solid #ecf0f1;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+/* Texto de error */
+.text-danger {
+  font-size: 0.8rem;
+}
+
+/* Alinear los títulos y botones */
+.row {
+  margin-bottom: 15px;
+}
+
+.text-end {
+  text-align: end;
+}/*# sourceMappingURL=encuesta.page.css.map */

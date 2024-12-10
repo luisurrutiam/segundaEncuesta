@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Registrar Usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Cedula</ion-label>
+      <ion-input formControlName="cedula"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="usuarioForm.get('cedula')?.hasError('required') && usuarioForm.get('cedula')?.touched">
+      El numero de cedula es obligatorio
+    </ion-text>
+
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="nombre"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="usuarioForm.get('nombre')?.hasError('required') && usuarioForm.get('nombre')?.touched">
+      El nombre es obligatorio
+    </ion-text>
+
+    <ion-item>
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input formControlName="apellido"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="usuarioForm.get('apellido')?.hasError('required') && usuarioForm.get('apellido')?.touched">
+      El apellido es obligatorio
+    </ion-text>
+
+    <ion-item>
+      <ion-label position="floating">Estado</ion-label>
+      <ion-input formControlName="estado"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="usuarioForm.get('estado')?.hasError('required') && usuarioForm.get('estado')?.touched">
+      El estado es obligatorio
+    </ion-text>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="usuarioForm.get('email')?.hasError('required') && usuarioForm.get('email')?.touched">
+      El email es obligatorio
+    </ion-text>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" formControlName="password">
+        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+      </ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="usuarioForm.get('password')?.hasError('required') && usuarioForm.get('password')?.touched">
+      La contraseña es obligatoria
+    </ion-text>
+
+    <ion-button color="success" expand="block" type="submit" [disabled]="usuarioForm.invalid">
+      Enviar
+    </ion-button>
+  </form>
+
+  <ion-button color="primary" expand="block" [routerLink]="['/login']">
+    ¿Ya tienes usuario? Inicia sesión
+  </ion-button>
+
+  
+</ion-content>

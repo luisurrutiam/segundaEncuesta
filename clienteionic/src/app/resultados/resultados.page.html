@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Resultados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="encuestas.length > 0">
+  <ion-list>
+    <ion-item *ngFor="let encuesta of encuestas">
+      <ion-label>
+        <h2>{{ encuesta.nombre }}</h2>
+        <div *ngFor="let pregunta of encuesta.preguntas">
+          <h3>{{ pregunta.enunciado }}</h3>
+          <ul>
+            <li *ngFor="let respuesta of encuesta.respuestas">
+          
+              {{ respuesta.respuesta }}
+            </li>
+          </ul>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-content *ngIf="encuestas.length === 0">
+  <ion-label>No hay encuestas disponibles.</ion-label>
+</ion-content>
+

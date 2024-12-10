@@ -1,0 +1,57 @@
+/* Estilos generales */
+ion-header, ion-toolbar {
+    --background: #3880ff; /* Color primario */
+    --color: #fff; /* Color del texto */
+  }
+  
+  ion-content {
+    --background: #32488a; /* Fondo claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  form {
+    width: 90%;
+    max-width: 360px;
+    margin: auto;
+  }
+  
+  ion-item {
+    --highlight-color-focused: #3880ff; /* Color del borde al enfocar */
+  }
+  
+  ion-label {
+    color: #666;
+  }
+  
+  ion-input {
+    --padding-start: 10px;
+  }
+  
+  ion-text {
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  
+  ion-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  ion-button[color="primary"] {
+    --background: #3880ff; /* Color primario */
+    --background-activated: #3171e0;
+  }
+  
+  ion-button[color="success"] {
+    --background: #10dc60; /* Color de éxito */
+    --background-activated: #0ec254;
+  }
+  
+  ion-button[color="secondary"] {
+    --background: #3dc2ff; /* Color secundario */
+    --background-activated: #36b0e6;
+  }

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ encuesta?.nombre }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="encuesta">
+  <form (ngSubmit)="submitForm()" #surveyForm="ngForm">
+    <ion-list>
+      <ion-item *ngFor="let pregunta of encuesta.preguntas">
+        <ion-label>{{ pregunta.enunciado }}</ion-label>
+        <ion-radio-group *ngIf="pregunta.tipopregunta.opcion" [(ngModel)]="formData['question_' + pregunta.id]" [name]="'question_' + pregunta.id">
+          <ion-item *ngFor="let opcion of pregunta.opciones">
+            <ion-label>{{ opcion.nombre }}</ion-label>
+            <ion-radio slot="start" [value]="opcion.nombre"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+        <ion-input *ngIf="!pregunta.tipopregunta.opcion" [(ngModel)]="formData['question_' + pregunta.id]" [name]="'question_' + pregunta.id"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="full" type="submit">Enviar</ion-button>
+  </form>
+</ion-content>

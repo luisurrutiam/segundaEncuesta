@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Encuestas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let encuesta of encuestas">
+      <ion-label>
+        <h2>{{ encuesta.nombre }}</h2>
+        <p>ID de Institución: {{ encuesta.institucion_id }}</p>
+      </ion-label>
+      <ion-button fill="clear" [routerLink]="['/respuestaencuesta', encuesta.id]">
+        Ver Encuesta
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

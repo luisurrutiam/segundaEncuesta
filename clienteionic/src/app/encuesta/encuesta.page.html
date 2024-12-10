@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Encuesta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="encuestaForm" (ngSubmit)="guardarEncuesta()">
+    <ion-item>
+      <ion-label position="stacked">Nombre de la Encuesta</ion-label>
+      <ion-input formControlName="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">ID de Institución</ion-label>
+      <ion-input formControlName="institucion_id" type="number"></ion-input>
+    </ion-item>
+
+    <div class="preguntas-container">
+      <ion-list formArrayName="preguntas">
+        <ion-list-header>
+          <ion-label>Preguntas</ion-label>
+        </ion-list-header>
+      
+        <ion-item *ngFor="let pregunta of preguntas.controls; let i = index" [formGroupName]="i">
+          <ion-label position="stacked">Enunciado</ion-label>
+          <ion-input formControlName="enunciado"></ion-input>
+      
+          <ion-label position="stacked">Tipo de Pregunta</ion-label>
+          <div formGroupName="tipopregunta">
+            <ion-input formControlName="nombre"></ion-input>
+            <ion-item>
+              <ion-label>¿Tiene opciones?</ion-label>
+              <ion-toggle formControlName="opcion"></ion-toggle>
+            </ion-item>
+          </div>
+      
+          <ion-list formArrayName="opciones">
+            <ion-list-header>
+              <ion-label>Opciones</ion-label>
+            </ion-list-header>
+      
+            <ion-item *ngFor="let opcion of getOpciones(i).controls; let j = index" [formGroupName]="j">
+              <ion-label position="stacked">Opción {{ j + 1 }}</ion-label>
+              <ion-input formControlName="nombre"></ion-input>
+              <ion-button fill="clear" color="danger" (click)="eliminarOpcion(i, j)">
+                <ion-icon name="remove-circle"></ion-icon>
+              </ion-button>
+            </ion-item>
+      
+            <ion-button expand="block" (click)="agregarOpcion(i)">Agregar Opción</ion-button>
+          </ion-list>
+      
+          <ion-button fill="clear" color="danger" (click)="eliminarPregunta(i)">
+            <ion-icon name="trash"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <ion-button expand="block" (click)="agregarPregunta()">Agregar Pregunta</ion-button>
+
+    <ion-button expand="block" type="submit" [disabled]="encuestaForm.invalid">
+      Guardar Encuesta
+    </ion-button>
+  </form>
+</ion-content>

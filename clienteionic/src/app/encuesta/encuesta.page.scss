@@ -1,0 +1,126 @@
+/* Contenedor principal */
+.container {
+  background-color: #f4f5f8; /* Fondo claro */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 360px; /* Ajuste para resolución de teléfono */
+  margin: auto;
+  overflow: hidden; /* Asegura que los elementos no se salgan del contenedor */
+}
+
+/* Centrando el formulario */
+.row.justify-content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-sm-6 {
+  width: 100%; /* Para que ocupe todo el ancho en móviles */
+  max-width: 360px; /* Ajusta el ancho máximo del formulario */
+}
+
+/* Título principal */
+h1, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Descripción */
+p {
+  font-family: 'Open Sans', sans-serif;
+  color: #1baab4;
+  text-align: center;
+}
+
+/* Etiquetas de formularios */
+.form-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: #77a5d2;
+}
+
+/* Input y textarea */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #3880ff; /* Color primario */
+  padding: 12px;
+  font-size: 0.9rem;
+  width: 100%; /* Asegura que los inputs ocupen todo el ancho disponible */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+/* Estilos para botones */
+button {
+  font-family: 'Poppins', sans-serif;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Asegura que los botones ocupen todo el ancho disponible */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+  color: #0ec254;
+}
+
+button.btn-success {
+  background-color: #10dc60; /* Color de éxito */
+  border: none;
+  color: white;
+}
+
+button.btn-success:hover {
+  background-color: #0ec254;
+}
+
+button.btn-outline-success {
+  border: 1px solid #10dc60; /* Color de éxito */
+  color: #10dc60;
+  background-color: white;
+}
+
+button.btn-outline-success:hover {
+  background-color: #10dc60;
+  color: white;
+}
+
+button.btn-danger {
+  background-color: #f04141; /* Color de peligro */
+  border: none;
+  color: white;
+}
+
+button.btn-danger:hover {
+  background-color: #d33939;
+}
+
+/* Tarjetas para cada pregunta */
+.card {
+  border: 1px solid #ecf0f1;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+/* Texto de error */
+.text-danger {
+  font-size: 0.8rem;
+}
+
+/* Alinear los títulos y botones */
+.row {
+  margin-bottom: 15px;
+}
+
+.text-end {
+  text-align: end;
+}
+
+/* Contenedor de preguntas */
+.preguntas-container {
+  max-height: 300px; /* Ajusta la altura máxima del contenedor de preguntas */
+  overflow-y: auto; /* Añade desplazamiento vertical */
+  overflow-x: auto; /* Añade desplazamiento horizontal */
+  margin-bottom: 10px;
+}

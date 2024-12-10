@@ -1,0 +1,51 @@
+/* Estilos generales */
+ion-header, ion-toolbar {
+  --background: #3880ff; /* Color primario */
+  --color: #fff; /* Color del texto */
+}
+
+ion-content {
+  --background: #354f9a5d; /* Fondo claro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+ion-card {
+  width: 90%;
+  max-width: 360px;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-card-header {
+  text-align: center;
+}
+
+ion-card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+ion-item {
+  --highlight-color-focused: #3880ff; /* Color del borde al enfocar */
+}
+
+ion-label {
+  color: #666;
+}
+
+ion-input {
+  --padding-start: 10px;
+}
+
+ion-button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+ion-button[color="secondary"] {
+  --background: #3dc2ff; /* Color secundario */
+  --background-activated: #36b0e6;
+}

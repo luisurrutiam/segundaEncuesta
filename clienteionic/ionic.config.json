@@ -1,0 +1,7 @@
+{
+  "name": "frontendIonic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

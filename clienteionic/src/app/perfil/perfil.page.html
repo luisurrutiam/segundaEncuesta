@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="currentUser">
+    <ion-card-header>
+      <ion-card-title>Bienvenido, {{ currentUser.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Email:</strong> {{ currentUser.email }}</p>
+      <p><strong>Rol:</strong> {{ currentUser.role }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

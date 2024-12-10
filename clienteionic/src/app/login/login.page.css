@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* Estilo general del ion-content para centrar el contenido */
+ion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Asegura que el contenido esté centrado verticalmente */
+  background-color: #ecf0f1; /* Fondo gris claro */
+}
+
+/* Tarjeta de Login */
+ion-card {
+  width: 80%;
+  max-width: 400px; /* Ancho máximo de la tarjeta */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: rgb(208, 192, 192);
+}
+
+/* Encabezado de la tarjeta */
+ion-card-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+ion-card-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #2c3e50; /* Color del título */
+}
+
+/* Estilo de los items del formulario */
+ion-item {
+  margin-top: 15px;
+  --border-radius: 8px; /* Borde redondeado */
+  --background: #140b0b;
+  --border-color: #bdc3c7;
+}
+
+/* Etiquetas de los campos (nombre y contraseña) */
+ion-label {
+  font-family: "Poppins", sans-serif;
+  color: #34495e;
+}
+
+/* Input de texto y contraseña */
+ion-input {
+  --padding-start: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+}
+
+/* Estilo del botón de Ingresar */
+ion-button {
+  width: 100%; /* Botón de ancho completo */
+  border-radius: 25px;
+  font-family: "Poppins", sans-serif;
+  background-color: #27ae60;
+  color: white;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+ion-button:hover {
+  background-color: #2ecc71;
+}/*# sourceMappingURL=login.page.css.map */
